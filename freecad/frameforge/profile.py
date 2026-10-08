@@ -810,40 +810,7 @@ class Profile:
                 A2 = Part.makeCircle(R, c2, d, 0, 90)
                 A3 = Part.makeCircle(R, c3, d, 90, 180)
                 A4 = Part.makeCircle(R, c4, d, 180, 270)
-                print("\n========== WIRE DEBUG ==========")
-                print("Family:", obj.Family)
-                print("MakeFillet:", obj.MakeFillet)
-                print("W:", W, "H:", H)
-                print("TW:", TW, "TF:", TF)
-                print("R:", R, "r:", r)
 
-                print("L1 :", L1.Vertexes[0].Point, "->", L1.Vertexes[-1].Point)
-                print("L2 :", L2.Vertexes[0].Point, "->", L2.Vertexes[-1].Point)
-                print("A1 :", A1.Vertexes[0].Point, "->", A1.Vertexes[-1].Point)
-                print("L3 :", L3.Vertexes[0].Point, "->", L3.Vertexes[-1].Point)
-                print("A2 :", A2.Vertexes[0].Point, "->", A2.Vertexes[-1].Point)
-                print("L4 :", L4.Vertexes[0].Point, "->", L4.Vertexes[-1].Point)
-                print("L5 :", L5.Vertexes[0].Point, "->", L5.Vertexes[-1].Point)
-                print("L6 :", L6.Vertexes[0].Point, "->", L6.Vertexes[-1].Point)
-                print("L7 :", L7.Vertexes[0].Point, "->", L7.Vertexes[-1].Point)
-                print("L8 :", L8.Vertexes[0].Point, "->", L8.Vertexes[-1].Point)
-                print("A3 :", A3.Vertexes[0].Point, "->", A3.Vertexes[-1].Point)
-                print("L9 :", L9.Vertexes[0].Point, "->", L9.Vertexes[-1].Point)
-                print("A4 :", A4.Vertexes[0].Point, "->", A4.Vertexes[-1].Point)
-                print("L10:", L10.Vertexes[0].Point, "->", L10.Vertexes[-1].Point)
-                print("L11:", L11.Vertexes[0].Point, "->", L11.Vertexes[-1].Point)
-                print("L12:", L12.Vertexes[0].Point, "->", L12.Vertexes[-1].Point)
-
-                wire1 = Part.Wire([
-                    L1, L2, A1, L3, A2, L4,
-                    L5, L6, L7, L8, A3, L9,
-                    A4, L10, L11, L12
-                ])
-
-                print("WIRE CLOSED:", wire1.isClosed())
-                print("WIRE VALID :", wire1.isValid())
-                print("WIRE EDGES :", len(wire1.Edges))
-                print("================================")
                 wire1 = Part.Wire([L1, L2, A1, L3, A2, L4, L5, L6, L7, L8, A3, L9, A4, L10, L11, L12])
 
             if obj.MakeFillet == True and obj.Family == "IPN":  # IPN avec arrondis /with rounded (tapered)
